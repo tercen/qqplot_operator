@@ -1,28 +1,19 @@
 {
-  "name": "Template R operator",
-  "description": "Return the medium value of a cell",
-  "tags": ["template"],
+  "name": "QQ-plot operator",
+  "description": "Create a quantile-quantile plot.",
+  "tags": ["data visualisation", "statistical testing"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/template_R_operator"],
+  "urls": ["https://github.com/tercen/qqplot_operator"],
   "properties": [
-   {
-    "kind": "StringProperty",
-    "name": "string_example",
-    "defaultValue": "example",
-    "description": "description parameter 1"
-    },
     {
     "kind": "EnumeratedProperty",
-    "name": "list_example",
-    "defaultValue": "value1",
+    "name": "distribution",
+    "defaultValue": "normal",
     "values": [
-      "value1",
-      "StringProperty",
-      "DoubleProperty",
-      "BooleanProperty",
-      "EnumeratedProperty"
+      "normal",
+      "uniform"
     ],
-    "description": "description parameter 2"
+    "description": "Whichi distribution to compare to, if no x axis is provided."
   }
   ]
 }

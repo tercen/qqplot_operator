@@ -1,14 +1,14 @@
 library(tercen)
 library(dplyr)
 
-options("tercen.workflowId" = "wwww")
-options("tercen.stepId"     = "dddd")
+options("tercen.workflowId" = "d330322c43363eb4f9b27738ef0042b9")
+options("tercen.stepId"     = "1ae42627-e9ce-4d9f-9797-8700adfd7718")
 
 getOption("tercen.workflowId")
 getOption("tercen.stepId")
 
 qqp_exp <- function(df, distribution) {
-  get_expected <- function (y, distri = distribution) {
+  get_expected <- function (y, distri = distrib) {
     probs = c(0.25, 0.75)
     y <- quantile(y, probs, names = FALSE, na.rm = TRUE)
     x <- distri(probs)
@@ -31,7 +31,7 @@ qqp_exp <- function(df, distribution) {
   return(df_out)
 }
 
-qqp <- function(df, distribution) {
+qqp <- function(df) {
   df_out <- as.data.frame(qqplot(df$.x, df$.y))
   df_out$.ci <- df$.ci[1]
   df_out$.ri <- df$.ri[1]
@@ -42,7 +42,6 @@ ctx <- tercenCtx()
 distribution <- "normal"
 if(!is.null(ctx$op.value("distribution"))) distribution <- ctx$op.value("distribution")
 
-## if only one
 if(ctx$hasXAxis | ctx$isPairwise) {
   ctx %>% 
     select(.x, .y, .ci, .ri) %>% 
@@ -54,11 +53,8 @@ if(ctx$hasXAxis | ctx$isPairwise) {
   ctx %>% 
     select(.y, .ci, .ri) %>% 
     group_by(.ci, .ri) %>%
-    do(qqp_exp(.)) %>%
+    do(qqp_exp(., distribution)) %>%
     ctx$addNamespace() %>%
     ctx$save()
 }
-
-## else compare x and y
-
 
