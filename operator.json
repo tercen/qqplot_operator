@@ -1,6 +1,6 @@
 {
-  "name": "QQ-plot operator",
-  "description": "Create a quantile-quantile plot.",
+  "name": "Q-Q Plot",
+  "description": "Quantile-Quantile Plot: Displays a scatterplot of two sets of quantiles against one another. Used to compare distributions. ",
   "tags": ["data visualisation", "statistical testing"],
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/qqplot_operator"],
