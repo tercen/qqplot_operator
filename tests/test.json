@@ -1,9 +1,9 @@
 {
   "kind": "OperatorUnitTest",
-  "name": "add",
+  "name": "Q-Q plot",
   "namespace": "ds0",
   "inputDataUri": "c03_simple_exp.tsv",
-  "outputDataUri": ["table1.csv","table2.csv"],
+  "outputDataUri": ["table1.csv","table2.csv","table3.csv"],
   "columns": ["Observation"],
   "rows": ["Variable"],
   "colors": [],
