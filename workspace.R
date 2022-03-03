@@ -1,8 +1,8 @@
 library(tercen)
 library(dplyr)
 
-options("tercen.workflowId" = "d330322c43363eb4f9b27738ef0042b9")
-options("tercen.stepId"     = "1ae42627-e9ce-4d9f-9797-8700adfd7718")
+options("tercen.workflowId" = "0add2df8c4543198d0b9ab7b55003e76")
+options("tercen.stepId"     = "d732d42f-cb7d-4402-9639-ca768ccba766")
 
 getOption("tercen.workflowId")
 getOption("tercen.stepId")
@@ -37,6 +37,8 @@ qqp <- function(df) {
   df_out$.ri <- df$.ri[1]
   return(df_out)
 }  
+
+
 ctx <- tercenCtx()
 
 distribution <- "normal"
