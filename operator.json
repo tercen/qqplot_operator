@@ -1,6 +1,6 @@
 {
   "name": "Q-Q Plot",
-  "description": "Quantile-Quantile Plot: Displays a scatterplot of two sets of quantiles against one another. Used to compare distributions. ",
+  "description": "Displays a Quantile-Quantile Plot to compare distribution quantiles against one another.",
   "tags": [
     "data visualisation",
     "plot",
