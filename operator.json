@@ -23,5 +23,43 @@
       ],
       "description": "Whichi distribution to compare to, if no x axis is provided."
     }
-  ]
+  ],
+  "operatorSpec": {
+    "kind": "OperatorSpec",
+    "ontologyUri": "https://tercen.com/_ontology/tercen",
+    "ontologyVersion": "0.0.1",
+    "inputSpecs": [
+      {
+        "kind": "CrosstabSpec",
+        "metaFactors": [],
+        "axis": [
+          {
+            "kind": "AxisSpec",
+            "metaFactors": [
+              {
+                "kind": "MetaFactor",
+                "name": "Y Axis",
+                "type": "numeric",
+                "description": "Input values for the Y axis.",
+                "ontologyMapping": "y-axis",
+                "crosstabMapping": "y",
+                "cardinality": "1",
+                "factors": []
+              },
+              {
+                "kind": "MetaFactor",
+                "name": "X Axis",
+                "type": "numeric",
+                "description": "Variable to compare to the Y axis (optional).",
+                "ontologyMapping": "x-axis",
+                "crosstabMapping": "x",
+                "cardinality": "0..1",
+                "factors": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
