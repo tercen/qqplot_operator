@@ -31,7 +31,28 @@
     "inputSpecs": [
       {
         "kind": "CrosstabSpec",
-        "metaFactors": [],
+        "metaFactors": [
+          {
+            "kind": "MetaFactor",
+            "name": "Row",
+            "type": "",
+            "description": "Optional row factor for grouping",
+            "ontologyMapping": "row",
+            "crosstabMapping": "row",
+            "cardinality": "0..n",
+            "factors": []
+          },
+          {
+            "kind": "MetaFactor",
+            "name": "Column",
+            "type": "",
+            "description": "Optional column factor for grouping",
+            "ontologyMapping": "column",
+            "crosstabMapping": "column",
+            "cardinality": "0..n",
+            "factors": []
+          }
+        ],
         "axis": [
           {
             "kind": "AxisSpec",
