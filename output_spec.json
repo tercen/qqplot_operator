@@ -1,0 +1,53 @@
+{
+  "outputSpecs": [{
+    "kind": "ConditionalJoinSpec",
+    "description": "Output varies based on X-axis presence",
+    "alternatives": [
+      {
+        "condition": "With X-axis (hasXAxis = true or isPairwise = true)",
+        "joinSpec": {
+          "kind": "OperatorJoinSpec",
+          "joinOperators": [{
+            "kind": "JoinOperator",
+            "joinType": "left",
+            "leftPair": {
+              "kind": "ColumnPair",
+              "lColumns": ["Row", "Column"],
+              "rColumns": ["Row", "Column"]
+            },
+            "rightRelation": {
+              "kind": "TableRelation",
+              "attributes": [
+                {"kind": "Attribute", "name": "x", "type": "double"},
+                {"kind": "Attribute", "name": "y", "type": "double"}
+              ]
+            }
+          }]
+        }
+      },
+      {
+        "condition": "No X-axis (hasXAxis = false)",
+        "joinSpec": {
+          "kind": "OperatorJoinSpec",
+          "joinOperators": [{
+            "kind": "JoinOperator",
+            "joinType": "left",
+            "leftPair": {
+              "kind": "ColumnPair",
+              "lColumns": ["Row", "Column"],
+              "rColumns": ["Row", "Column"]
+            },
+            "rightRelation": {
+              "kind": "TableRelation",
+              "attributes": [
+                {"kind": "Attribute", "name": "q_obs", "type": "double"},
+                {"kind": "Attribute", "name": "q_theo", "type": "double"},
+                {"kind": "Attribute", "name": "q_exp", "type": "double"}
+              ]
+            }
+          }]
+        }
+      }
+    ]
+  }]
+}
