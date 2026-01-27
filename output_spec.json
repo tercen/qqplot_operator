@@ -5,6 +5,7 @@
       "description": "Output varies based on X-axis presence",
       "alternatives": [
         {
+          "kind": "OutputAlternative",
           "condition": "With X-axis (hasXAxis = true or isPairwise = true)",
           "joinSpec": {
             "kind": "OperatorJoinSpec",
@@ -43,6 +44,7 @@
           }
         },
         {
+          "kind": "OutputAlternative",
           "condition": "No X-axis (hasXAxis = false)",
           "joinSpec": {
             "kind": "OperatorJoinSpec",
