@@ -60,7 +60,7 @@
               {
                 "kind": "MetaFactor",
                 "name": "Y-Axis",
-                "type": "numeric",
+                "type": "double",
                 "description": "First distribution values",
                 "ontologyMapping": "measurement",
                 "crosstabMapping": "y",
@@ -70,7 +70,7 @@
               {
                 "kind": "MetaFactor",
                 "name": "X-Axis",
-                "type": "numeric",
+                "type": "double",
                 "description": "Second distribution values (optional)",
                 "ontologyMapping": "measurement",
                 "crosstabMapping": "x",
